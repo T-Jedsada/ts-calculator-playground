@@ -3,7 +3,6 @@ import { Calculator } from "../calculator";
 import { MainController } from "./../main.controller";
 import { mock } from 'jest-mock-extended';
 
-
 describe("MainController integration test", () => {
   let mainController: MainController;
   let calculator: Calculator;
