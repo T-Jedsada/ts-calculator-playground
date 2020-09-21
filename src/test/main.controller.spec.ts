@@ -1,7 +1,7 @@
 import { MainView } from "./../main.contract";
 import { Calculator } from "../calculator";
 import { MainController } from "./../main.controller";
-import { mock } from 'jest-mock-extended';
+import { mock } from "jest-mock-extended";
 
 describe("MainController integration test", () => {
   let mainController: MainController;
@@ -16,11 +16,11 @@ describe("MainController integration test", () => {
 
   it("test function calculate should be successful", () => {
     mainController.calculate(1, 9, 1);
-    expect(mockMainView.setResultCalculation).toHaveBeenCalledWith(10)
+    expect(mockMainView.setResultCalculation).toHaveBeenCalledWith(10);
   });
 
   it("test function calculate should be error", () => {
     mainController.calculate(4, 1, 0);
-    expect(mockMainView.setErrorMessage).toHaveBeenCalledWith("divide by zero")
+    expect(mockMainView.setErrorMessage).toHaveBeenCalledWith("divide by zero");
   });
 });
