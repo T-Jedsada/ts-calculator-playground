@@ -1,6 +1,7 @@
 import { MainController } from "./main.controller";
 import { MainView } from "./main.contract";
 import { Calculator } from "./calculator";
+import { Queue } from "./queue";
 
 class Main implements MainView {
   stdin = process.openStdin();
@@ -68,6 +69,13 @@ class Main implements MainView {
 }
 
 function main(): void {
+  let queue = new Queue<Number>()
+  queue.pushItem(88)
+  queue.pushItem(89)
+  queue.pop()
+
+  console.log("items: ", queue.getItems())
+
   new Main();
 }
 
