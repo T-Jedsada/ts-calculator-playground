@@ -22,8 +22,8 @@ export class MainController implements MainControllerImpl {
       this.mainView.setResultCalculation(result);
     } else if (operator == 4) {
       const result = this.calculator.divide(number1, number2);
-      if (result == -1) {
-        this.mainView.setErrorMessage("divide by zero")
+      if (number2 == 0) {
+        this.mainView.setErrorMessage("divide \ zero")
       } else {
         this.mainView.setResultCalculation(result);
       }

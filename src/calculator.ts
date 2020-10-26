@@ -12,7 +12,7 @@ export class Calculator implements CalculatorImpl {
   }
   divide(number1: number, number2: number) {
     if (number2 == 0) {
-      return -1;
+      return -0;
     } else {
       return number1 / number2;
     }
