@@ -1,4 +1,4 @@
-import { CalculatorImpl } from "./calculator.contract";
+import { CalculatorImpl } from './calculator.contract';
 
 export class Calculator implements CalculatorImpl {
   plus(number1: number, number2: number) {
@@ -11,10 +11,6 @@ export class Calculator implements CalculatorImpl {
     return number1 * number2;
   }
   divide(number1: number, number2: number) {
-    if (number2 == 0) {
-      return -0;
-    } else {
-      return number1 / number2;
-    }
+    return number2 === 0 ? -0 : number1 / number2;
   }
 }
